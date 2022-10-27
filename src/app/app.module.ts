@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListaGenteComponent } from './lista-gente/lista-gente.component';
 import { MaterialImportsModule } from './material-imports/material-imports.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MaterialImportsModule } from './material-imports/material-imports.modul
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialImportsModule
+    MaterialImportsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
