@@ -20,4 +20,9 @@ export class ListaGenteComponent implements OnInit {
     })
   }
 
+  getImagenActor (gente : Gente){
+    return `https://image.tmdb.org/t/p/w500/${gente.profile_path}`
+
+  }
+
 }
