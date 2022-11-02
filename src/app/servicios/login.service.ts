@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { RespuestaLogin, RespuestaSesionID } from '../interfaces/login';
 
-const API_BASE_URL = 'https://api.themoviedb.org/3/authentication/token/new?api_key=450804f0ac576e0fb2014ac91b706571';
 
 @Injectable({
   providedIn: 'root'
@@ -14,11 +14,11 @@ export class LoginService {
    }
 
    public getRequestToken(): Observable<RespuestaLogin>{
-    return this.http.get<RespuestaLogin>(`${API_BASE_URL}`);
+    return this.http.get<RespuestaLogin>( `${environment.apiBaseUrl}/authentication/token/new?api_key=${environment.apiKey}`);
   }
 
   public getSesionId(requestToken: String) : Observable<RespuestaSesionID>{
-    return this.http.post<RespuestaSesionID>('https://api.themoviedb.org/3/authentication/session/new?api_key=450804f0ac576e0fb2014ac91b706571', {"request_token" : requestToken})
+    return this.http.post<RespuestaSesionID>( `${environment.apiBaseUrl}/authentication/session/new?api_key=${environment.apiKey}`, {"request_token" : requestToken})
   }
 
 }
