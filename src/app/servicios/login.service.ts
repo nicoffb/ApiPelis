@@ -21,4 +21,7 @@ export class LoginService {
     return this.http.post<RespuestaSesionID>( `${environment.apiBaseUrl}/authentication/session/new?api_key=${environment.apiKey}`, {"request_token" : requestToken})
   }
 
+  /* public deleteSesion(deleteSesion : DeleteSesionDto){
+    this.http.delete()
+  } */
 }

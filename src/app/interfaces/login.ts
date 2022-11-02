@@ -13,3 +13,4 @@ export interface RespuestaSesionID {
     success:    boolean;
     session_id: string;
 }
+

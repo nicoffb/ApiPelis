@@ -1,0 +1,16 @@
+<div class="contenedor">
+  <mat-card class="example-card" *ngFor="let gente of listaGente">
+    <mat-card-header>
+      <mat-card-title>{{gente.name}}</mat-card-title>
+      <mat-card-subtitle>Sexo {{gente.gender}}</mat-card-subtitle>
+      <mat-card-subtitle>{{gente.id}}</mat-card-subtitle>
+      <button mat-button (click)="openDialog(gente)">Ver detalles actor </button> 
+
+    </mat-card-header>
+    <img mat-card-lg-image [src]=getImagenActor(gente)
+      onerror="this.src='https://cdn4.iconfinder.com/data/icons/political-elections/50/48-512.png'">
+  </mat-card>
+</div>
+
+
+<button mat-button color="accent" (click)="login()">LOG IN</button>
