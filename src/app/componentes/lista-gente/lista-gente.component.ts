@@ -58,6 +58,7 @@ export class ListaGenteComponent implements OnInit {
   openDialog(actor: Gente) {
     this.genteService.getPersonaId(actor).subscribe((res) => {
       this.selectActor = res;
+      console.log(this.selectActor);
       this.dialog.open(DialogComponent, {
         data:{
           infoGente : this.selectActor

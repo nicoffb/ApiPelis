@@ -1,0 +1,11 @@
+<div class="contenedor">
+    <mat-card class="example-card" *ngFor="let peliculasPop of listaPeliculasPop">
+      <mat-card-header>
+        <mat-card-title>{{peliculasPop.title}}</mat-card-title>
+        <mat-card-subtitle>{{peliculasPop.overview}}</mat-card-subtitle>
+      </mat-card-header>
+     <img mat-card-lg-image [src]=getImagenPeliculasPop(peliculasPop)
+        onerror="this.src='https://cdn4.iconfinder.com/data/icons/political-elections/50/48-512.png'">
+    </mat-card>
+  </div>
+  

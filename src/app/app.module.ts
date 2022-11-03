@@ -7,12 +7,14 @@ import { ListaGenteComponent } from './componentes/lista-gente/lista-gente.compo
 import { MaterialImportsModule } from './material-imports/material-imports.module';
 import { HttpClientModule } from '@angular/common/http';
 import { DialogComponent } from './componentes/dialog/dialog/dialog.component';
+import { ListaPeliculasPopComponent } from './componentes/lista-peliculas-pop/lista-peliculas-pop.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaGenteComponent,
-    DialogComponent
+    DialogComponent,
+    ListaPeliculasPopComponent
   ],
   imports: [
     BrowserModule,

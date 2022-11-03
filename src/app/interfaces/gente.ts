@@ -60,7 +60,4 @@ export enum KnownForDepartment {
 
 ///dialog///??
 
-export interface GenteData {
-    infoGente : RespuestaActor;
-}
 

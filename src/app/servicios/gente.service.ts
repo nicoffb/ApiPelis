@@ -19,7 +19,7 @@ export class GenteService {
     }
 
     public getPersonaId(actor : Gente): Observable<RespuestaActor>{
-      return  this.http.get<RespuestaActor>(`${environment.apiBaseUrl}+ "/person/" + ${actor.id} + "?api_key=450804f0ac576e0fb2014ac91b706571&language=en-US"`);
+      return  this.http.get<RespuestaActor>(`${environment.apiBaseUrl}+ /person/ + ${actor.id} + ?api_key=450804f0ac576e0fb2014ac91b706571&language=en-US`);
     }
   
 }
